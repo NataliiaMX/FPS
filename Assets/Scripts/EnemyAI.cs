@@ -7,26 +7,61 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] float chaseRange = 5f;
+    [SerializeField] float chaseRange = 15f;
+
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
-    void Start()
+    bool isProvoked = false;
+
+    private void Start() 
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
-
-    void Update()
+    private void Update() 
     {
-        ChasePlayer();
+        MoveEnemy();
     }
 
-    private void ChasePlayer()
+    private void MoveEnemy ()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
-        if (distanceToTarget <= chaseRange)
+        if (isProvoked)
         {
-            navMeshAgent.SetDestination(target.position);
+            EngageTarget();
         }
+        else if (distanceToTarget <= chaseRange)
+        {
+            isProvoked = true;
+        }
+    }
+
+    private void EngageTarget()
+    {
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+        else if (distanceToTarget < navMeshAgent.stoppingDistance)
+        {
+            AttackTarget();
+        }
+    }
+
+    private void AttackTarget()
+    {
+        Debug.Log(name + " is attacking " + target.name);
+    }
+
+    private void ChaseTarget()
+    {
+        navMeshAgent.SetDestination(target.position);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Display the explosion radius when selected
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }

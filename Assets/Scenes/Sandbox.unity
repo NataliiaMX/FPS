@@ -1051,13 +1051,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6599394193116470281, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6599394193116470286, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1596590277}
     - target: {fileID: 6599394193116470286, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: chaseRange
-      value: 15
+      value: 14.45
       objectReference: {fileID: 0}
     - target: {fileID: 6599394193116470324, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: m_Name
