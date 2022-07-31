@@ -7,6 +7,7 @@ public class Wearpon : MonoBehaviour
 {
     [SerializeField] Camera fpCamera;
     [SerializeField] ParticleSystem gunFireVFX;
+    [SerializeField] GameObject hitVFX;
     [SerializeField] float range = 30f;
     [SerializeField] float damagePoints = 40f;
     
@@ -29,6 +30,7 @@ public class Wearpon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, range))
         {
+            CreateHitImpact(hit);
             Debug.Log(hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null)
@@ -41,5 +43,11 @@ public class Wearpon : MonoBehaviour
         {
             return;
         }
+    }
+
+    private void CreateHitImpact(RaycastHit hit)
+    {
+        GameObject impact = Instantiate(hitVFX, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impact, .1f);
     }
 }

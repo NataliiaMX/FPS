@@ -850,6 +850,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3620904300763159581, guid: 931f35ab70d636c438946f3e764d267c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620904300763159581, guid: 931f35ab70d636c438946f3e764d267c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 931f35ab70d636c438946f3e764d267c, type: 3}
 --- !u!1001 &3917950576002644959
@@ -968,6 +976,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4451793412552102831, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: hitVFX
+      value: 
+      objectReference: {fileID: 8200221114784671387, guid: 2920507a7ebd0094c829a3c482b17fd6, type: 3}
     - target: {fileID: 4451793412552102831, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: gunFire
       value: 
