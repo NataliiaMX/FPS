@@ -6,9 +6,10 @@ using UnityEngine;
 public class Wearpon : MonoBehaviour
 {
     [SerializeField] Camera fpCamera;
+    [SerializeField] ParticleSystem gunFireVFX;
     [SerializeField] float range = 30f;
     [SerializeField] float damagePoints = 40f;
-
+    
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -18,6 +19,12 @@ public class Wearpon : MonoBehaviour
     }
 
     private void Shoot()
+    {
+        gunFireVFX.Play();
+        ProcessRaycast();
+    }
+
+    private void ProcessRaycast()
     {
         RaycastHit hit;
         if (Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, range))
