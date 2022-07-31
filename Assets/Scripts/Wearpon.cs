@@ -31,7 +31,7 @@ public class Wearpon : MonoBehaviour
         if (Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, range))
         {
             CreateHitImpact(hit);
-            Debug.Log(hit.transform.name);
+            // Debug.Log(hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null)
             {

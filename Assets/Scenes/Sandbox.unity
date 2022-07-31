@@ -128,24 +128,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8751566815070624006, guid: e3f0081e9d519f943939c40c229e73f4, type: 3}
   m_PrefabInstance: {fileID: 8751566817010737715}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &284692565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6599394193116470324, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
-  m_PrefabInstance: {fileID: 6599394192238406442}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &284692566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284692565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65cb6771517ec1245b859bd451f4ccf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 100
 --- !u!1001 &389327588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1153,6 +1135,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284692567, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 284692567, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 746678636c0d6fe4b8d8a6f7856d2cae, type: 2}
     - target: {fileID: 6599394193116470280, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1197,25 +1187,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6599394193116470281, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6599394193116470286, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 553212441}
-    - target: {fileID: 6599394193116470286, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
-      propertyPath: chaseRange
-      value: 14.45
-      objectReference: {fileID: 0}
     - target: {fileID: 6599394193116470324, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6599394193116470325, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
-      propertyPath: m_Radius
-      value: 1.46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecea1cd6cb2941f4ea8fa424a67a4cc8, type: 3}
