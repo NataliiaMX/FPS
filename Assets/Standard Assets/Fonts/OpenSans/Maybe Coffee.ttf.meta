@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3f6d7e72c65e43646861155a96d5c345
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Maybe Coffee
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 882b751c105bfdc47a825195d41e551a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
