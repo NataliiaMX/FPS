@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: f43eb71560353694d9256b31f7ef7250, type: 2}
+--- !u!223 &67126591 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2960760358848146606, guid: 931f35ab70d636c438946f3e764d267c, type: 3}
+  m_PrefabInstance: {fileID: 3620904300336372541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &171669133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8751566815070624006, guid: e3f0081e9d519f943939c40c229e73f4, type: 3}
@@ -665,6 +670,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 24639899070008560, guid: 21c14d1fec317c642813f34cc5197b4e, type: 3}
   m_PrefabInstance: {fileID: 1808127458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1943491260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4451793411984512379, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+  m_PrefabInstance: {fileID: 4451793412552102829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1995649588
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,9 +846,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1166749008742096170, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1943491260}
+    - target: {fileID: 1166749008742096170, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 67126591}
     - target: {fileID: 4451793412012201360, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451793412012201360, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4451793412012558772, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: m_RootOrder
