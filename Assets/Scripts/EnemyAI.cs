@@ -60,6 +60,12 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent.SetDestination(target.position);
     }
 
+    private void FaceTarget ()
+    {
+        // transform.rotation = where the target is, we need to rotate at sertain speed
+        
+    }
+
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected

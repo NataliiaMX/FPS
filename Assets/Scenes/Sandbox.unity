@@ -533,11 +533,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8751566815070624006, guid: e3f0081e9d519f943939c40c229e73f4, type: 3}
   m_PrefabInstance: {fileID: 1541455981}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1590218307 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2137246186177468891, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
-  m_PrefabInstance: {fileID: 4451793412552102829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720330506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,67 +837,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 931f35ab70d636c438946f3e764d267c, type: 3}
---- !u!1001 &3917950576002644959
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1590218307}
-    m_Modifications:
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2072
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0039
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0047
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.037075046
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9993125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334558155080139828, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2660503907438436786, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: m_Name
-      value: Gunfire VFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231949448129396226, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-      propertyPath: moveWithTransform
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
 --- !u!1001 &4451793412552102829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,18 +892,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4451793412552102831, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
-      propertyPath: hitVFX
-      value: 
-      objectReference: {fileID: 8200221114784671387, guid: 2920507a7ebd0094c829a3c482b17fd6, type: 3}
-    - target: {fileID: 4451793412552102831, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
-      propertyPath: gunFire
-      value: 
-      objectReference: {fileID: 5909374715255391709}
-    - target: {fileID: 4451793412552102831, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
-      propertyPath: gunFireVFX
-      value: 
-      objectReference: {fileID: 5909374715255391709}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
 --- !u!1001 &4572896695190374623
@@ -1049,11 +971,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4572896694043733713, guid: 4b8b93f8ef3ecc24684e7efca4405012, type: 3}
   m_PrefabInstance: {fileID: 4572896695190374623}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &5909374715255391709 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7231949448129396226, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
-  m_PrefabInstance: {fileID: 3917950576002644959}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6012081228064925625
 PrefabInstance:
