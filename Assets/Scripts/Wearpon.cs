@@ -33,11 +33,7 @@ public class Wearpon : MonoBehaviour
             CreateHitImpact(hit);
             // Debug.Log(hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target == null)
-            {
-                return;
-            }
-            target.TakeDamage(damagePoints);
+            target?.TakeDamage(damagePoints); //if target !=null
         }
         else
         {

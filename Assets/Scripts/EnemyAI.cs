@@ -23,6 +23,11 @@ public class EnemyAI : MonoBehaviour
         MoveEnemy();
     }
 
+    public void OnDamageTaken ()
+    {
+        isProvoked = true;
+    }
+
     private void MoveEnemy ()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
