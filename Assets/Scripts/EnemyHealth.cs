@@ -10,7 +10,6 @@ public class EnemyHealth : MonoBehaviour
         // GetComponent<EnemyAI>().OnDamageTaken();
         BroadcastMessage("OnDamageTaken"); // Every script attached to the game object and all its children that has this method will be called.
         hitPoints -= damagePoints;
-        Debug.Log(hitPoints);
 
         if (hitPoints <= 0)
         {
