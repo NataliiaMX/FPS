@@ -6,16 +6,17 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class WearponZoom : MonoBehaviour
 {
     [SerializeField] Camera camera;
+    [SerializeField] RigidbodyFirstPersonController fpsController;
     [SerializeField ]float zoomIn = 25f;
     [SerializeField] float zoomOut = 67f;
 
-    RigidbodyFirstPersonController fpsController;
-
     bool zoomedInToggle = false;
 
-    private void Start() 
+    private void OnEnable() 
     {
-        fpsController = GetComponent<RigidbodyFirstPersonController>();
+        fpsController.movementSettings.ForwardSpeed = 5f;
+        fpsController.movementSettings.BackwardSpeed = 5f;
+        Debug.Log(fpsController.movementSettings.ForwardSpeed + ", " + fpsController.movementSettings.BackwardSpeed);
     }
 
     private void Update()

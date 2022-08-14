@@ -11,6 +11,8 @@ public class Wearpon : MonoBehaviour
     [SerializeField] float range = 30f;
     [SerializeField] float damagePoints = 40f;
     [SerializeField] Ammo ammoSlot;
+    bool canIShoot = true;
+    float timeBetweenSHots = 2f;
 
     private void Start()
     {
@@ -18,24 +20,23 @@ public class Wearpon : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canIShoot == true)
         {
-            Shoot();
+           StartCoroutine("Shoot"); 
         }
+        
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        canIShoot = false;
         if (ammoSlot.GetCurrentAmmo() > 0)
         {
             ProcessRaycast();
             ammoSlot.ReduceCurrentAmmo();
         }
-        else
-        {
-            Debug.Log("out of ammo");
-            return;
-        }
+        yield return new WaitForSeconds(timeBetweenSHots);
+        canIShoot = true;
     }
 
     private void ProcessRaycast()
