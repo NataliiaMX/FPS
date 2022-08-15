@@ -2208,6 +2208,30 @@ PrefabInstance:
       propertyPath: ammoAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.data[1].ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.data[2].ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.data[0].ammoAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.data[1].ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlot.Array.data[2].ammoAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2137246186177627643, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -14,6 +14,11 @@ public class Wearpon : MonoBehaviour
     bool canIShoot = true;
     float timeBetweenSHots = 2f;
 
+    private void OnEnable() 
+    {
+        canIShoot = true;    
+    }
+
     private void Start()
     {
         ammoSlot = FindObjectOfType<Ammo>();
