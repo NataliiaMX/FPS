@@ -1787,7 +1787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1923937518
 Transform:
   m_ObjectHideFlags: 0
@@ -2200,6 +2200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 301494575, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1166749008742096170, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: gameOverCanvas
       value: 
@@ -2213,11 +2217,23 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: ammoSlot.Array.data[1].ammoType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: ammoSlot.Array.data[2].ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoType
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
@@ -2230,6 +2246,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
       propertyPath: ammoSlot.Array.data[2].ammoAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.data[0].ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316096195548931397, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoAmount
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2137246186177627643, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
@@ -2288,7 +2316,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2016164486, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 786a0718f57cdda46bc0c30c3bba6f23, type: 3}
 --- !u!1001 &4572896695190374623
 PrefabInstance:

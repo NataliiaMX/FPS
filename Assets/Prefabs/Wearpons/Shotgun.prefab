@@ -254,8 +254,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2337074158996965286}
   - component: {fileID: 2337074159000356742}
-  - component: {fileID: 2337074158999389510}
   - component: {fileID: 9176819441757914815}
+  - component: {fileID: 2337074158999389510}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -291,6 +291,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2337074158997199750}
   m_Mesh: {fileID: 4300000, guid: b5d3572f7b6bfd143b39ce51cf6bde2e, type: 3}
+--- !u!114 &9176819441757914815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce9682fb99bd34498f135c60330c541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpCamera: {fileID: 0}
+  gunFireVFX: {fileID: 5909374716061566989}
+  hitVFX: {fileID: 8200221114784671387, guid: 2920507a7ebd0094c829a3c482b17fd6, type: 3}
+  range: 30
+  damagePoints: 40
+  ammoSlot: {fileID: 0}
+  ammoType: 1
 --- !u!23 &2337074158999389510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -332,24 +351,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9176819441757914815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337074158997199750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce9682fb99bd34498f135c60330c541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpCamera: {fileID: 0}
-  gunFireVFX: {fileID: 5909374716061566989}
-  hitVFX: {fileID: 8200221114784671387, guid: 2920507a7ebd0094c829a3c482b17fd6, type: 3}
-  range: 30
-  damagePoints: 40
-  ammoSlot: {fileID: 0}
 --- !u!1 &2337074158997199752
 GameObject:
   m_ObjectHideFlags: 0

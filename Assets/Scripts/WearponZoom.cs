@@ -16,7 +16,7 @@ public class WearponZoom : MonoBehaviour
     {
         fpsController.movementSettings.ForwardSpeed = 5f;
         fpsController.movementSettings.BackwardSpeed = 5f;
-        Debug.Log(fpsController.movementSettings.ForwardSpeed + ", " + fpsController.movementSettings.BackwardSpeed);
+        // Debug.Log(fpsController.movementSettings.ForwardSpeed + ", " + fpsController.movementSettings.BackwardSpeed);
     }
 
     private void Update()
