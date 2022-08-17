@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 4451793412009146102}
   - component: {fileID: 4451793412016264758}
   - component: {fileID: 4451793412018217074}
-  - component: {fileID: 2016164486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -124,7 +123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84529049cede1a74f9e6146b69be36bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 10
+  - ammoType: 1
+    ammoAmount: 15
+  - ammoType: 2
+    ammoAmount: 5
 --- !u!54 &4451793412009146102
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -224,19 +229,6 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
---- !u!114 &2016164486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4451793412012201360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84529049cede1a74f9e6146b69be36bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoAmount: 10
 --- !u!1 &4451793412012201362
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: range
@@ -596,6 +588,7 @@ MonoBehaviour:
   range: 25
   damagePoints: 80
   ammoSlot: {fileID: 1316096195548931397}
+  ammoType: 2
 --- !u!1001 &9145724335203143122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: 23ac3668002bd5d429e2befedf823952, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: 23ac3668002bd5d429e2befedf823952, type: 3}
       propertyPath: range

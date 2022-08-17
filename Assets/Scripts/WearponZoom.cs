@@ -12,15 +12,22 @@ public class WearponZoom : MonoBehaviour
 
     bool zoomedInToggle = false;
 
-    private void OnEnable() 
+    private void Update() 
+    {
+        ProseccRifleSettings(); 
+    }
+
+    private void OnDisable() 
+    {
+        camera.fieldOfView = zoomOut;
+        fpsController.movementSettings.ForwardSpeed = 8f;
+        fpsController.movementSettings.BackwardSpeed = 8f;
+    }
+    private void ProseccRifleSettings()
     {
         fpsController.movementSettings.ForwardSpeed = 5f;
         fpsController.movementSettings.BackwardSpeed = 5f;
         // Debug.Log(fpsController.movementSettings.ForwardSpeed + ", " + fpsController.movementSettings.BackwardSpeed);
-    }
-
-    private void Update()
-    {
         if (Input.GetMouseButtonDown(1))
         {
             if (zoomedInToggle == false)
@@ -37,7 +44,6 @@ public class WearponZoom : MonoBehaviour
                 camera.fieldOfView = zoomOut; //zoomed out
                 zoomedInToggle = false;
             }
-
         }
     }
 }
