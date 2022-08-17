@@ -13,14 +13,24 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
+    EnemyHealth1 enemyHealth;
 
     private void Start() 
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyHealth = GetComponent<EnemyHealth1>();
     }
     private void Update() 
     {
-        MoveEnemy();
+        if(enemyHealth.IsDead() == false)
+        {
+            MoveEnemy();
+        }
+        else 
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
     }
 
     public void OnDamageTaken ()
@@ -72,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         // Vector3 direction = (transform.position - target.position).normalized;
         // Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         // transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed); 
-        // // slerp allows to rotate smoothly between two vectors
+        // slerp allows to rotate smoothly between two vectors
         transform.LookAt(target);
     }
 

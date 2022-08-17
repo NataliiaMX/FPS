@@ -13,7 +13,7 @@ public class Wearpon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
     bool canIShoot = true;
-    float timeBetweenSHots = 2f;
+    float timeBetweenSHots = 0.1f;
 
     private void OnEnable() 
     {
