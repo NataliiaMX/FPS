@@ -5,14 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void ReloadScene ()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1;  // "starts" time 
-    }
+    [SerializeField] TriggerRespawn triggerRespawn;
 
-    public void QuitGame ()
+    private void Start()
+    {
+        triggerRespawn = FindObjectOfType<TriggerRespawn>();
+    }
+    public void ReloadScene()
+    {
+        if (triggerRespawn.GetRespawnTrigger() == true)
+        {
+            SceneManager.LoadScene(1);
+            Time.timeScale = 1;  // "starts" time 
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1;  // "starts" time 
+        }
+    }
+    public void QuitGame()
     {
         Application.Quit();
     }
 }
+
+
+
