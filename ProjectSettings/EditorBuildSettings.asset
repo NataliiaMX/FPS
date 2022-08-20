@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 9fe86b41c2566c248bd31c50c5ec3cb5
-  - enabled: 1
-    path: Assets/Scenes/Castle.unity
-    guid: 21c5902ce1d4cce41b8f1db2826aed0b
   m_configObjects: {}

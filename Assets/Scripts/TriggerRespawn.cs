@@ -9,14 +9,9 @@ public class TriggerRespawn : MonoBehaviour
     {
         return respawnTrigger;
     }
-
-    private void Start() {
-        Debug.Log(respawnTrigger);
-    }
     private void OnCollisionEnter(Collision other) 
     {
         respawnTrigger = true;
-        Debug.Log(respawnTrigger);
         Destroy(gameObject);
     }
 }
