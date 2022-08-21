@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class LadderTrigger : MonoBehaviour
 {
-   [SerializeField] GameObject magicLadder;
-   [SerializeField] Quaternion quaternion;
-   Vector3 magicLadderPosition;
-   bool isTriggered = false;
-   private void Start() 
-   {
-        magicLadderPosition = new Vector3(0f, 0f, 0f);
-   }
+    [SerializeField] GameObject magicLadder;
+    [SerializeField] Quaternion quaternion;
+    Vector3 magicLadderPosition;
+    bool needsTrigger = true;
+    private void Start()
+    {
+        magicLadderPosition = new Vector3(174.432098f,0,397.597504f);
+    }
 
-   private  void OnCollisionEnter(Collision other)
-   {
-        isTriggered = true;
-        Instantiate(magicLadder, magicLadderPosition, quaternion); 
-        Debug.Log(isTriggered);
-   }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (needsTrigger == true)
+        {
+          Instantiate(magicLadder, magicLadderPosition, quaternion);
+          Debug.Log(needsTrigger);
+          needsTrigger = false;
+        }
+    }
 }
