@@ -18,8 +18,8 @@ public class LadderTrigger : MonoBehaviour
         if (needsTrigger == true)
         {
           Instantiate(magicLadder, magicLadderPosition, quaternion);
-          Debug.Log(needsTrigger);
           needsTrigger = false;
+          Destroy(gameObject);
         }
     }
 }
