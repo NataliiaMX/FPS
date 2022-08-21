@@ -6,6 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float playerHP = 100;
 
+    public void IncreaseHealth (float hpIncrement)
+    {
+        playerHP += hpIncrement;
+    }
+
     public void TakeDamage (float damagePoints)
     {
         playerHP -= damagePoints;
