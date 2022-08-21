@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2300000}
   - component: {fileID: 6400000}
   - component: {fileID: 3230887532740014168}
+  - component: {fileID: 7252485206379024675}
   m_Layer: 0
   m_Name: MagicLadder
   m_TagString: Untagged
@@ -203,6 +204,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a58b47ea02d4743864899603478a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7252485206379024675
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60d0f7a6d45e0aa439ab4cfea195c7b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &50412182748724537
 PrefabInstance:
   m_ObjectHideFlags: 0
