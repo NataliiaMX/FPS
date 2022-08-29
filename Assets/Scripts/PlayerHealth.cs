@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float playerHP = 100;
+    bool isDead = true;
 
     public void IncreaseHealth (float hpIncrement)
     {
@@ -17,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (playerHP <= 0)
         {
-            GetComponent<DeathHandler>().HandleDeath();
+            GetComponent<GameOverHandler>().HandleGameOver(isDead);
         }
     }
 }
