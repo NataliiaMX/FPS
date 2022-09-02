@@ -28,6 +28,12 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ReloadGame ()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+    }
 }
 
 
