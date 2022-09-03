@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4451793412012558772}
   - component: {fileID: 4451793412552102831}
+  - component: {fileID: 8231734190506685800}
   - component: {fileID: 1166749008742096170}
   - component: {fileID: 1316096195548931397}
   - component: {fileID: 4451793412009146102}
@@ -64,7 +65,7 @@ GameObject:
   - component: {fileID: 4451793412018217074}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 100
+  hpText: {fileID: 0}
+  postProcessingRed: {fileID: 0}
+--- !u!114 &8231734190506685800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4451793412012201360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dea2e656262235419965d66d398233a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1166749008742096170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60db169ebcafc0458de3a0e01251bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  youreDeadCanvas: {fileID: 0}
   gameOverCanvas: {fileID: 0}
   gun: {fileID: 4451793411984512379}
 --- !u!114 &1316096195548931397
@@ -125,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoSlots:
   - ammoType: 0
-    ammoAmount: 10
+    ammoAmount: 30
   - ammoType: 1
     ammoAmount: 15
   - ammoType: 2
@@ -156,8 +172,8 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 22d544dfe4d8a8d4aa5cea1703dd0b43, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.6
+  m_Radius: 0.95
+  m_Height: 4.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4451793412018217074
@@ -174,8 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 4451793412013053878}
   movementSettings:
-    ForwardSpeed: 8
-    BackwardSpeed: 8
+    ForwardSpeed: 16
+    BackwardSpeed: 16
     StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 304
@@ -225,7 +241,7 @@ MonoBehaviour:
     lockCursor: 1
   advancedSettings:
     groundCheckDistance: 0.1
-    stickToGroundHelperDistance: 0.6
+    stickToGroundHelperDistance: 0.5
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
@@ -242,6 +258,7 @@ GameObject:
   - component: {fileID: 4451793412006562710}
   - component: {fileID: 4451793412018217072}
   - component: {fileID: 4451793412019293694}
+  - component: {fileID: 983317810}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -397,6 +414,66 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4451793412012201362}
   m_Enabled: 1
+--- !u!114 &983317810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4451793412012201362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 4451793412012558774}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &4451793412280606333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: range
-      value: 19
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: ammoSlot
@@ -470,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 4451793412013053878}
     - target: {fileID: 9176819441757914815, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: damagePoints
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
@@ -589,10 +666,11 @@ MonoBehaviour:
   fpCamera: {fileID: 4451793412013053878}
   gunFireVFX: {fileID: 7231949448129396226, guid: 7c879362c8ec746479ce31024a75fafa, type: 3}
   hitVFX: {fileID: 8200221114784671387, guid: 2920507a7ebd0094c829a3c482b17fd6, type: 3}
-  range: 25
+  range: 50
   damagePoints: 80
   ammoSlot: {fileID: 1316096195548931397}
   ammoType: 2
+  ammoDisplay: {fileID: 0}
 --- !u!1001 &9145724335203143122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -662,7 +740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: 23ac3668002bd5d429e2befedf823952, type: 3}
       propertyPath: range
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9176819441757914815, guid: 23ac3668002bd5d429e2befedf823952, type: 3}
       propertyPath: ammoSlot

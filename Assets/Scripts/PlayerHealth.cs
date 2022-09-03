@@ -8,7 +8,8 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float playerHP = 100;
     [SerializeField] TextMeshProUGUI hpText;
-    bool isDead = true;
+   
+    bool isDead = false;
 
     private void Update() 
     {
@@ -27,10 +28,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (float damagePoints)
     {
+        GetComponent<DisplayDamage>().ShowDamageImpcat();
         playerHP -= damagePoints;
 
         if (playerHP <= 0)
         {
+            isDead = true;
             GetComponent<GameOverHandler>().HandleGameOver(isDead);
         }
     }
