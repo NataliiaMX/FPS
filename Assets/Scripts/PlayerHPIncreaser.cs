@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHPIncreaser : MonoBehaviour
 {
     [SerializeField] PlayerHealth playerHealth;
-    float healthIncrement = 3f;
+    [SerializeField] float healthIncrement = 3f;
 
     private void OnCollisionEnter(Collision other) 
     {

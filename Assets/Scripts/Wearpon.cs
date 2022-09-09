@@ -25,6 +25,7 @@ public class Wearpon : MonoBehaviour
     private void Start()
     {
         ammoSlot = FindObjectOfType<Ammo>();
+        GetComponent<AudioSource>().enabled = false;
     }
     void Update()
     {
@@ -47,11 +48,19 @@ public class Wearpon : MonoBehaviour
         canIShoot = false;
         if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
+            StartCoroutine("PlaySFX");
             ProcessRaycast();
             ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenSHots);
         canIShoot = true;
+    }
+
+    IEnumerator PlaySFX ()
+    {
+        GetComponent<AudioSource>().enabled = true;
+        yield return new WaitForSeconds(timeBetweenSHots);
+        GetComponent<AudioSource>().enabled = false;
     }
 
     private void ProcessRaycast()

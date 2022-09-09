@@ -113,8 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38fbabe0a7c32b46a9ac37995ccb056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  chaseRange: 26.19
+  chaseRange: 24.8
   turnSpeed: 5
 --- !u!114 &6599394192238406444
 MonoBehaviour:
