@@ -6,8 +6,9 @@ public class TriggerRespawn : MonoBehaviour
 
 {
     [SerializeField] Canvas sealIsBrokenCanvas;
-    float destroyTime  = 1.5f;
     bool respawnTrigger = false;
+    float destroyTime  = 1.5f;
+    
     private void Start() 
     {
         sealIsBrokenCanvas.enabled = false;

@@ -15,13 +15,13 @@ public class SceneLoader : MonoBehaviour
     {
         if (triggerRespawn.GetRespawnTrigger() == true)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             Time.timeScale = 1;  // "starts" time 
         }
         else
         {
-            SceneManager.LoadScene(0);
-            Time.timeScale = 1;  // "starts" time 
+            SceneManager.LoadScene(1);
+            Time.timeScale = 1;
         }
     }
     public void QuitGame()
@@ -29,9 +29,9 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 
-    public void ReloadGame ()
+    public void StartGame ()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
 }
