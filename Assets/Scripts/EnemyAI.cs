@@ -8,12 +8,9 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] float chaseRange = 15f;
     [SerializeField] float turnSpeed = 5f;
-    [SerializeField] AudioClip enemyMusic;
-
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
-    public bool musicPlaying = false;
     EnemyHealth1 enemyHealth;
     Transform target;
 
@@ -58,7 +55,6 @@ public class EnemyAI : MonoBehaviour
 
     private void EngageTarget()
     {
-        musicPlaying = true;
         FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {  
@@ -89,14 +85,6 @@ public class EnemyAI : MonoBehaviour
         // transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed); 
         // slerp allows to rotate smoothly between two vectors
         transform.LookAt(target);
-    }
-
-    private void PlayEnemyMusic ()
-    {
-        if (musicPlaying)
-        {
-
-        }
     }
 
     void OnDrawGizmosSelected()
